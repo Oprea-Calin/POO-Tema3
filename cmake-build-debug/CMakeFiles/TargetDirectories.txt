@@ -1,0 +1,3 @@
+D:/cacapoo/cmake-build-debug/CMakeFiles/cacapoo.dir
+D:/cacapoo/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/cacapoo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
