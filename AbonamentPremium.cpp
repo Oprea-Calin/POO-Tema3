@@ -5,10 +5,10 @@
     AbonamentPremium::AbonamentPremium() {
     }
 
-    int AbonamentPremium::getReducere()
+    const int AbonamentPremium::getReducere()
 {
         return reducere;
-};
+}
 
 AbonamentPremium::AbonamentPremium(int reducere, std::string nume_abonament, float pret, int perioada) {
  this->reducere = reducere;
@@ -16,3 +16,5 @@ AbonamentPremium::AbonamentPremium(int reducere, std::string nume_abonament, flo
  this->pret = pret;
  this-> perioada = perioada;
 }
+
+AbonamentPremium::~AbonamentPremium(){}

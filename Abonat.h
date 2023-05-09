@@ -9,12 +9,15 @@ class Abonat {
 
 protected:
     std::string nr_telefon;
-    Abonament abonament;
+    Abonament* abonament; //pointer la abonament
+    std::string nume;
 public:
     Abonat(std::string nr_telefon, Abonament abonament, int id, std::string nume, std::string cnp);
     Abonament getAbonament();
-    AbonamentPremium* getAbonamentRef();
+    std::string getNume();
+    std::string getNumarTel();
+    AbonamentPremium* getAbonamentRef(Abonament abonament1);
 };
 
 
-#endif //CACAPOO_ABONAT_H
+#endif
