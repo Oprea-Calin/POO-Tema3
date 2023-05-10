@@ -27,9 +27,9 @@ float Clienti::suma_bani_incasata()
     for (int i = 0; i < abonati.size(); i++)
     {
         //AbonamentPremium* aba= abonati[i]->getAbonamentRef(abonati[i]->getAbonament());
-        abonamente[i]->show();
-        std::cout<<"Abonamentul este al abonatului "<<abonati[i]->getNume()<<" cu numarul de telefon "<<abonati[i]->getNumarTel()<<'\n';
-        std::cout<<'\n';
+       // abonamente[i]->show();
+//        std::cout<<"Abonamentul este al abonatului "<<abonati[i]->getNume()<<" cu numarul de telefon "<<abonati[i]->getNumarTel()<<'\n';
+//        std::cout<<'\n';
         suma += abonati[i]->getAbonament().getPret() * abonati[i]->getAbonament().getPerioada();
         if(typeid(*abonamente[i]) == typeid(AbonamentPremium))
         {

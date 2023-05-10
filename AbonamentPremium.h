@@ -13,6 +13,7 @@ private:
 public:
     AbonamentPremium();
     AbonamentPremium(int reducere, std::string nume_abonament, float pret, int perioada);
+    void show();
     const int getReducere();
     virtual ~AbonamentPremium();
 };

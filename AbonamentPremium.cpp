@@ -16,5 +16,9 @@ AbonamentPremium::AbonamentPremium(int reducere, std::string nume_abonament, flo
  this->pret = pret;
  this-> perioada = perioada;
 }
+void AbonamentPremium::show() {
+    std::cout<<'\n';
+    std::cout<<"Abonamentul "<< nume_abonament<<" "<< " este pe perioada de "<<perioada<<" luni si costa "<< pret-reducere<< " lei/luna, aplicandu-se o reducere de "<<reducere<<" de lei, fiind un abonament premium."<<'\n';
+}
 
 AbonamentPremium::~AbonamentPremium(){}

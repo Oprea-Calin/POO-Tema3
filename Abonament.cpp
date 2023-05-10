@@ -30,7 +30,8 @@ const std::string Abonament::getNume(){
 
 void Abonament::show()
 {
-    std::cout<<"Abonamentul "<< nume_abonament<<" "<< " este pe perioada de "<<perioada<<" luni si costa "<< pret<< " lei/luna. ";
+    std::cout<<'\n';
+    std::cout<<"Abonamentul "<< nume_abonament<<" "<< " este pe perioada de "<<perioada<<" luni si costa "<< pret<< " lei/luna. "<<'\n';
 }
 
 Abonament& Abonament::operator=(const Abonament& other)
