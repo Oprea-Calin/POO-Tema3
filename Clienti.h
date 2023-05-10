@@ -13,11 +13,14 @@ public:
     Clienti();
     void adauga_abonat(const Abonat &abonat,const Abonament &abonament);
     void adauga_abonat(const Abonat &abonat,const AbonamentPremium &abonamentpremium);
-    void numar_abonati_premium();
     float suma_bani_incasata();
     int getNrAbonati();
 
     std::vector<Abonat*> getAbonati();
+
+    Abonat& operator[](const std::string& other_nume);
+    friend std::ostream& operator<<(std::ostream& stream, const Clienti& obj);
+
     virtual ~Clienti();
 };
 

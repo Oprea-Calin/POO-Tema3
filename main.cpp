@@ -17,10 +17,10 @@ int main()
     clienti.adauga_abonat(abonat2,abonament2);
     clienti.adauga_abonat(abonat3,abonament_premium);
 
-    clienti.numar_abonati_premium(); //0 , nu functioneaza cast-ul
     std::cout<<"Sunt "<<clienti.getNrAbonati()<<" clienti cu abonament premium.";
     std::cout<<std::endl;
     std::cout<<clienti.suma_bani_incasata()<<" de lei este suma de bani incasata."; //6360
+    std::cout<<'\n'<<clienti;
 
     return 0;
 }

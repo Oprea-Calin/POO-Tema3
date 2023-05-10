@@ -16,7 +16,7 @@ public:
     Abonament getAbonament();
     std::string getNume();
     std::string getNumarTel();
-    AbonamentPremium* getAbonamentRef(Abonament abonament1);
+    AbonamentPremium* getAbonamentRef(const Abonament &abonament1);
 };
 
 

@@ -16,7 +16,7 @@ std::string Abonat::getNume() {
 std::string Abonat::getNumarTel(){
     return nr_telefon;
 }
-AbonamentPremium* Abonat::getAbonamentRef(Abonament)
+AbonamentPremium* Abonat::getAbonamentRef(const Abonament &abonament1)
 {
       //std::cout<<*abonament<<"\n";
 //    try{
@@ -31,19 +31,17 @@ AbonamentPremium* Abonat::getAbonamentRef(Abonament)
 
 //    auto* ap = dynamic_cast<AbonamentPremium*>(abonament);
 //    return ap;
+    if (typeid(abonament1)== typeid(AbonamentPremium)) {
+        try {
+            auto* abonament_ = dynamic_cast<AbonamentPremium*>(abonament);
 
-    try{
-    Abonament abonament_=*abonament;
-    AbonamentPremium* abonament1 = new AbonamentPremium();
-    abonament1 = dynamic_cast<AbonamentPremium*>(&abonament_);
-
-    return abonament1;
+            return abonament_;
+        }
+        catch (std::exception exception) {
+            return NULL;
+        }
     }
-    catch(std::exception exception)
-    {
-        return NULL;
-    }
-/*
+        /*
     if(auto* ap = dynamic_cast<AbonamentPremium*>(&abonament))
     {
         std::cout<<"cast referinta reusit"<< " "<< abonament;

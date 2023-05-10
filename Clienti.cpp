@@ -21,37 +21,14 @@ int Clienti::getNrAbonati() {
     return nr_abonatipremium;
 }
 
-void Clienti::numar_abonati_premium()
-{
-//    nr_abonatipremium=0;
-//    for (auto i : abonati) {
-//        if (typeid(*i) == typeid(AbonamentPremium)) {
-//            Abonament *aux;
-//            aux = dynamic_cast<AbonamentPremium *>(aux);
-//            aux->show();
-//            nr_abonatipremium++;
-//        } else {
-//            continue;
-//        }
-//    }
-
-       // Abonament abonament = abonati[i]->getAbonament();
-       // AbonamentPremium* ab = abonati[i]->getAbonamentRef(abonament);
-        //dynamic_cast pe pointer
-        //AbonamentPremium* ab= dynamic_cast<AbonamentPremium*>(abonati[i]);
-        //if ( ab != nullptr)
-       // {
-//            count++;
-//        }
-//    }
-}
 float Clienti::suma_bani_incasata()
 {
     float suma = 0;
     for (int i = 0; i < abonati.size(); i++)
     {
+        //AbonamentPremium* aba= abonati[i]->getAbonamentRef(abonati[i]->getAbonament());
         abonamente[i]->show();
-        std::cout<<"Abonamentul este al abonatului "<<abonati[i]->getAbonament().getNume()<<" cu numarul de telefon "<<abonati[i]->getNumarTel()<<'\n';
+        std::cout<<"Abonamentul este al abonatului "<<abonati[i]->getNume()<<" cu numarul de telefon "<<abonati[i]->getNumarTel()<<'\n';
         std::cout<<'\n';
         suma += abonati[i]->getAbonament().getPret() * abonati[i]->getAbonament().getPerioada();
         if(typeid(*abonamente[i]) == typeid(AbonamentPremium))
@@ -64,6 +41,26 @@ float Clienti::suma_bani_incasata()
 std::vector<Abonat*> Clienti::getAbonati()
 {
     return abonati;
+}
+std::ostream& operator<<(std::ostream& stream, const Clienti& obj)
+{
+    int counter = 0;
+    for (auto i : obj.abonamente)
+    {
+        if (typeid(*i) == typeid(AbonamentPremium))
+        {
+            Abonament* aux;
+            aux = dynamic_cast<AbonamentPremium*>(i);                       //working dynamic_cast
+            aux->show();
+            counter++;
+        }
+        else
+        {
+            i->show();
+        }
+    }
+
+    return stream;
 }
 //functii virtuale, pointer la clasa de baza, smart pointers, dynamic cast, supraincarcare copiere, exceptii, const
 //
