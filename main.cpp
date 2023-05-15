@@ -21,6 +21,5 @@ int main()
     std::cout<<std::endl;
     std::cout<<clienti.suma_bani_incasata()<<" de lei este suma de bani incasata."; //6360
     std::cout<<'\n'<<clienti;
-
     return 0;
 }
